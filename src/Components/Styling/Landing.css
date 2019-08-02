@@ -1,0 +1,21 @@
+/* The landing page container should be a column-displayed flexbox, with 5vw left
+  and right padding, and a space around the items */
+.landing {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0 5vw;
+  justify-content: space-around;
+}
+
+/* The landing page title should be aligned at flex-end, with a font size of 36px */
+.landing .title {
+  align-self: flex-end;
+  font-size: 36px;
+}
+
+/* The landing page description should be italics and 26px font size */
+.landing .description {
+  font-style: italic;
+  font-size: 26px;
+}

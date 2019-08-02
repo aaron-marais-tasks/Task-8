@@ -2,10 +2,11 @@
 	This file contains my header component
 */
 
-// Import react and logo into script scope
+// Import react, logo and stylesheet into script scope
 import React from 'react';
 import Logo from '../Images/logo.png'
 import Menu from "./Menu.jsx"
+import "./Styling/Header.css"
 
 // Export an anonymous function as the default export
 export default props => 

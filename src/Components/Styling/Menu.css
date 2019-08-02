@@ -1,0 +1,22 @@
+/* Each menu item should have .25vw side margin, 1vw left/.25 right padding, with black color,
+  and no decoration. Font weight should be bold, 26px size, and should transition in and out
+  with .4s duration. */
+.menuItems a {
+  margin: 0 .25vw;
+  padding: 0 1vw 0 .25vw;
+  color: black;
+  text-decoration: none;
+  transition: color ease-in-out .4s;
+  font-weight: bold;
+  font-size: 26px;
+}
+
+/* Add a right solid black border with 2px width to each item unless it's last */
+.menuItems a:not(:last-child) {
+  border-right: 2px solid black;
+}
+
+/* Each menu item changes color */
+.menuItems a:hover {
+  color: orange;
+}

@@ -1,0 +1,49 @@
+/* The edit profile container should be a column-displayed flexbox, with 5vw left
+  and right padding, and a space around the items */
+.edit-profile {
+  display: flex;
+  flex: 1;
+  padding: 0 5vw;
+  justify-content: space-around;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.content .item {
+	display: flex;
+	justify-content: space-between;
+	padding: .3vw;
+}
+
+.item .value, .item input {
+	font-size: 18px;
+	padding: 3px;
+	line-height: 1.1;
+}
+
+.item :not(input).value {
+	border: 2px solid transparent;
+}
+
+.controls {
+	display: flex;
+	flex-direction: column;
+	padding-left: 1vw;
+	width: 20vw;
+}
+
+.control {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	line-height: 1;
+	width: 100%;
+	height: 36px;
+	background-color: lightblue;
+}
+
+

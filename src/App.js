@@ -11,9 +11,10 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css'
 
 // Import our core components
-import Header from './Components/Header'
-import Product from './Components/Product'
-import Landing from './Components/Landing'
+import Header from './Components/Header.jsx'
+import Product from './Components/Product.jsx'
+import Landing from './Components/Landing.jsx'
+import EditProfile from './Components/EditProfile.jsx'
 
 // Our products list
 const products = [
@@ -27,18 +28,30 @@ const products = [
 
 // Export an anonymous classs as the default export
 export default class extends React.Component {
+  constructor(props) {
+    super(props)
+    this.props = props
+    this.state = {
+      loggedIn: false
+    }
+  }
+
   render() {
     return (
       <BrowserRouter>
         {/* Our application container */}
         <div className="App">
           {/* Our header; pass loggedIn as false */}
-          <Header loggedIn={true} />
+          <Header loggedIn={this.state.loggedIn} />
 
-          <Route exact={true} path="/" component={() => <Landing name="I.T. Infinity">We are a collection that strives for good computers</Landing>} />
-            {/* The landing page component */}
+          {/* The landing page component */}
+          <Route exact path="/" component={() => <Landing name="I.T. Infinity">We are a collection that strives for good computers</Landing>} />
 
-          <Route path="/products" component={() => <Product.Import from={products} />} />
+          {/* The products list */}
+          <Route path="/shop" component={() => <Product.Import from={products} />} />
+
+          {/* The user edit profile page */}
+          <Route exact path="/profile" component={EditProfile} />
         </div>
       </BrowserRouter>
     )

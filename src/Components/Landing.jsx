@@ -2,8 +2,9 @@
 	This file contains my landing page renderer
 */
 
-// Import react into sccript scope
+// Import react into script scope
 import React from 'react'
+import "./Styling/Landing.css"
 
 // Export an anonymous function as the default export
 export default props => (

@@ -1,5 +1,5 @@
 /*
-  This is my application styling
+  This is my global application styling
 */
 
 /* Reset our body to defaults and give it some fonts */
@@ -16,90 +16,4 @@ body {
 /* Reset our header's margins to 0 */
 h1,h2,h3,h4,h5,h6 {
   margin: 0;
-}
-
-/* Our header should be a flexbox, with 120px height, a space between items, center-justified,
-  15px left and right padding, 15px bottom margin, and a 1px solid lightgray margin */
-header {
-  display: flex;
-  height: 120px;
-  justify-content: space-between;
-  padding: 0 15px;
-  margin-bottom: 15px;
-  align-items: center;
-  border-bottom: 1px solid lightgrey;
-}
-
-/* The header image should have 100% height */
-header img {
-  height: 100%;
-}
-
-/* The landing page container should be a column-displayed flexbox, with 5vw left and right padding,
-  and a space around the items */
-.landing {
-  display: flex;
-  flex-direction: column;
-  padding: 0 5vw;
-  justify-content: space-around;
-}
-
-/* The landing page title should be aligned at flex-end, with a font size of 36px */
-.landing .title {
-  align-self: flex-end;
-  font-size: 36px;
-}
-
-/* The landing page description should be italics and 26px font size */
-.landing .description {
-  font-style: italic;
-  font-size: 26px;
-}
-
-/* The list of products should be a column-display flexbox, with center-aligned items,
-  5vw side-padding, 5px top padding, 15px top margin, and a 1px solid lightgrey border */
-.products {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 5vw;
-  margin-top: 15px;
-  padding-top: 5px;
-  border-top: 1px solid lightgrey;
-}
-
-/* The products container title should be 36px font size, and underlined */
-.products .title {
-  font-size: 36px;
-  text-decoration: underline;
-}
-
-/* The list of products container should be a wrapped flexbox */
-.products .list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-/* Each product should be a column-display flexbox, with 20vw width, 1.1vw margin,
-  1vw border radius, and a 1px solid lightgrey border */
-.products .product {
-  display: flex;
-  flex-direction: column;
-  width: 20vw;
-  margin: 1.1vw;
-  border-radius: 1vw;
-  border: 1px solid lightgrey;
-}
-
-/* Each product's name should be aligned at the end of the flexbox, with bold weight and .4vw padding */
-.product .name {
-  align-self: flex-end;
-  font-weight: bold;
-  padding: .4vw;
-}
-
-/* Each product's description should have a 1px solid grey border, with .4vw padding */
-.product .description {
-  border-top: 1px solid grey;
-  padding: .4vw;
 }

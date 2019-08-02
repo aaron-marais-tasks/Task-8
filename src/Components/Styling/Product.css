@@ -1,0 +1,45 @@
+/* The product lists container should be a column-displayed flexbox, with 5vw left
+  and right padding, and a space around the items */
+.products {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0 5vw;
+  justify-content: space-around;
+}
+
+/* The products container title should be 36px font size, and underlined */
+.products .title {
+  font-size: 36px;
+  text-decoration: underline;
+}
+
+/* The list of products container should be a wrapped flexbox */
+.products .list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Each product should be a column-display flexbox, with 20vw width, 1.1vw margin,
+  1vw border radius, and a 1px solid lightgrey border */
+.products .product {
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  margin: 1.1vw;
+  border-radius: 1vw;
+  border: 1px solid lightgrey;
+}
+
+/* Each product's name should be aligned at the end of the flexbox, with bold weight and .4vw padding */
+.product .name {
+  align-self: flex-end;
+  font-weight: bold;
+  padding: .4vw;
+}
+
+/* Each product's description should have a 1px solid grey border, with .4vw padding */
+.product .description {
+  border-top: 1px solid grey;
+  padding: .4vw;
+}

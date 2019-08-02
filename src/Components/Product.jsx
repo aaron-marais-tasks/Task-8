@@ -4,6 +4,7 @@
 
 // Import react into script scope
 import React from 'react';
+import "./Styling/Product.css"
 
 // Export named class "Product" so I can expect with subcomponents after export
 export default class Product extends React.Component {

@@ -1,0 +1,16 @@
+/* Our header should be a flexbox, with 120px height, a space between items, center-justified,
+  15px left and right padding, 15px bottom margin, and a 1px solid lightgray margin */
+header {
+  display: flex;
+  height: 120px;
+  justify-content: space-between;
+  padding: 0 15px;
+  margin-bottom: 15px;
+  align-items: center;
+  border-bottom: 1px solid lightgrey;
+}
+
+/* The header image should have 100% height */
+header img {
+  height: 100%;
+}

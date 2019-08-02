@@ -1,16 +1,29 @@
 import React from "react"
-import { Link } from 'react-router-dom'
+import { Route, Link } from 'react-router-dom'
+import "./Styling/Menu.css"
 
 export default class extends React.Component {
-    render() {
-        if(!this.props.loggedIn) {
-            return <h1>{this.props.loggedIn ? "Welcome" : "Please sign in"}</h1>
+    constructor(props) {
+        super(props)
+        this.state = {
+            loggedIn: props.loggedIn
         }
+    }
 
+    render() {
         return (
-            <div class="menuItems">
-                <Link to="/">Home</Link>
-                <Link to="/products">Products</Link>
+            <div className="menuItems">
+                {this.state.loggedIn ? (
+                    <>
+                        <Route path={["/shop", "/profile"]} render={() => <Link to="/">Home</Link>} />
+                        <Route exact path={["/", "/profile"]} render={() => <Link to="/shop">Shop</Link>} />
+                        <Route exact path={["/", "/shop"]} render={() => <Link to="/profile">Edit profile</Link>} />
+                    </>
+                ) : (
+                    <Link to="#" onClick={() => {
+                        this.setState({loggedIn: !this.state.loggedIn})
+                    }}>Log In</Link>
+                )}
             </div>
         )
     }
