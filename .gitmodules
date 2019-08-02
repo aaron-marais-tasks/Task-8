@@ -1,0 +1,4 @@
+[submodule "Task 1"]
+	path = Task 1
+	url = https://github.com/aaron-marais-tasks/Task-8.git
+	branch = Compulsory-1
