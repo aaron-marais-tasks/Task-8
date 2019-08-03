@@ -1,14 +1,33 @@
+/*
+  This file holds all our calculator styling
+*/
+
+/* Our root document should set font size to 1.5vw, have 100vh height, displayed as flex, and have all items
+  centered vertically and hortizontally */
 #root {
   font-size: 1.5vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Our result div should be a column flexbox, center-justified and end-aligned items.
+  Its width is calulated as (24vw - (3vw + 4px)), it has 1px top and left margin,
+  1.5vw side padding, 6vw height, and a 1px solid lightgray border */
 .result {
-  width: calc(24vw - 4px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: calc(24vw - ((1.5vw * 2) + 4px));
   margin: 1px 0 0 1px;
+  padding: 0 1.5vw;
   height: 6vw;
   border: 1px solid lightgray;
 }
 
+/* Our buttons container should be a wrapped flexbox, with 24vw width and 50vh height */
 .buttons {
   display: flex;
   flex-wrap: wrap;
@@ -16,26 +35,47 @@
   height: 50vh;
 }
 
-.buttons button {
+/* Every button should have 6vw width, 10vh height, 1.5vw font size, and a .25s easing transition
+  on box-shadow */
+button {
   width: 6vw;
   height: 10vh;
   font-size: 1.5vw;
+  transition: box-shadow 0.25s ease;
 }
 
+/* When buttons are hovered, they will have a box shadow applied, and increased z-index */
+button:hover {
+  box-shadow:
+    0 5px 15px 0px rgba(0, 0, 0, 0.75),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.5),
+    inset 0 1px 1px rgba(255, 255, 255, 0.8);
+
+  z-index: 1;
+}
+
+/* Our body buttons (0-9, ., =) should be a wrapped row flexbox, with 12vw width, and 40vh height */
 .body {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   width: 18vw;
   height: 40vh;
-  flex-wrap: wrap;
 }
 
+/* Last item in body buttons (=) should have white color, blue bg-color, and bold font weight */
 .body button:last-child {
   color: white;
   background-color: blue;
   font-weight: bold;
 }
 
+/* Each button in top bar and side bar should have a slightly darker gray background */
+.topbar button, .sidebar button {
+  background-color: lightgray;
+}
+
+/* Display sidebar as a column flexbox */
 .sidebar {
   display: flex;
   flex-direction: column;
