@@ -26,7 +26,7 @@ const products = [
   {name: "RubyGemstones", description: "This IDE is used for Ruby development"}
 ]
 
-// Export an anonymous classs as the default export
+// Export an anonymous class as the default export
 export default class extends React.Component {
   constructor(props) {
     super(props)
@@ -41,7 +41,7 @@ export default class extends React.Component {
       <BrowserRouter>
         {/* Our application container */}
         <div className="App">
-          {/* Our header; pass loggedIn as false */}
+          {/* Our header; pass loggedIn as state false */}
           <Header loggedIn={this.state.loggedIn} />
 
           {/* The landing page component */}
