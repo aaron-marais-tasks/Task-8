@@ -20,25 +20,29 @@ export const ItemContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	font-size: 22px;
-	width: 55vw;
+	width: 50vw;
 	max-height: 80vh;
 	overflow: auto;
-	transform: translateX(-5.5vw);
-
-	.remove {
-		padding: 0 .5vw;
-		margin: 0 .5vw;
-		background-color: rgba(255,0,0,.5);
-		border-radius: 10px;
-		opacity: 0;
-		transition: opacity .3s linear;
-	}
-
-	&:hover .remove {
-		opacity: 1;
-	}
 `
 
 export const Item = styled.div`
 	display: flex;
+	position: relative;
+	padding: 5px 0;
+
+	.remove {
+		opacity: 0;
+		transition: opacity .3s linear;
+		position: absolute;
+		width: 100%;
+		text-align: center;
+		background-color: rgb(172, 0, 0);
+		border-radius: 10px;
+		cursor: pointer;
+		padding: 2px 0;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
 `
